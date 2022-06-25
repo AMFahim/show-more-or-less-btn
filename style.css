@@ -1,0 +1,49 @@
+h1 {
+  text-align: center;
+}
+
+.show-hide-text {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 1px solid #0071dc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 8px 8px #b8b8b8c4;
+}
+
+.show-hide-text a {
+  order: 2;
+  padding: 8px 20px;
+  background-color: #0071dc;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.show-hide-text p {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.show-less {
+  display: none;
+}
+
+.show-less:target {
+  display: block;
+}
+
+.show-less:target ~ p {
+  display: block;
+  max-height: 100%;
+}
+
+.show-less:target + a {
+  display: none;
+}
